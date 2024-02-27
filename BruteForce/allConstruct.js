@@ -1,5 +1,22 @@
 
-
+const allConstruct = (target, wordBank) => {
+    if (target === '') return [[]];
+    
+    const result = [];
+    
+    for (let word of wordBank) {
+      if (target.startsWith(word)) {
+        const suffix = target.slice(word.length);
+        const suffixWays = allConstruct(suffix, wordBank);
+        const targetWays = suffixWays.map(way => [word, ...way]);
+        result.push(...targetWays);
+      }
+    }
+    
+    return result;
+  };
+  
+  
 
 
 console.log(allConstruct('purple', ['purp', 'p', 'ur', 'le', 'purpl']));
