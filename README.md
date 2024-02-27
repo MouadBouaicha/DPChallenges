@@ -107,8 +107,4 @@ Write a function `allConstruct(target, wordBank)` that accepts a target string a
 - Initialize the table with default values.
 - Seed the trivial answer into the table.
 - Iterate through the table.
-- Fill further positions based on
-"# DPChallenges" 
-"# DPChallenges" 
-"# DPChallenges" 
-"# DPChallenges" 
+- Fill further positions based on the current position
